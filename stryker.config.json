@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "pnpm",
+  "reporters": ["clear-text", "progress"],
+  "testRunner": "jest",
+  "plugins": ["@stryker-mutator/jest-runner"],
+  "mutate": ["src/day-1-testability.ts"],
+  "ignorePatterns": [
+    "src/**/*.fuzz.ts",
+    "src/fuzz/**"
+  ],
+  "concurrency": 1,
+  "timeoutMS": 30000
+}
