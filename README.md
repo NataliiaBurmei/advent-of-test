@@ -1,4 +1,4 @@
-# Fuzz Testing Guide
+# Fuzz and Mutation Testing Guide
 
 ## What is Fuzz Testing?
 
