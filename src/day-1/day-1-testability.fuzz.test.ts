@@ -1,15 +1,15 @@
 import fc from 'fast-check';
 import { parseInstruction, movePosition, countZeroPassings } from './day-1-testability';
 
-// Preview what the arbitrary generates
-// const validInstruction = fc.tuple(
-//   fc.constantFrom('L', 'R'),
-//   fc.integer({ min: 1, max: 1000 })
-// ).map(([dir, dist]) => `${dir}${dist}`);
+// generated data for understanding the data that is being generated
+const validInstruction = fc.tuple(
+  fc.constantFrom('L', 'R'),
+  fc.integer({ min: 1, max: 1000 })
+).map(([dir, dist]) => `${dir}${dist}`);
 
-// console.log('Sample instructions:', fc.sample(validInstruction, 10));
-// console.log('Sample strings:', fc.sample(fc.string(), 10));
-// console.log('Sample positions:', fc.sample(fc.integer({ min: 0, max: 99 }), 10));
+console.log('Sample instructions:', fc.sample(validInstruction, 10));
+console.log('Sample strings:', fc.sample(fc.string(), 10));
+console.log('Sample positions:', fc.sample(fc.integer({ min: 0, max: 99 }), 10));
 
 
 describe('Fuzz Testing - parseInstruction', () => {
@@ -21,7 +21,6 @@ describe('Fuzz Testing - parseInstruction', () => {
             fc.constantFrom('L', 'R') as fc.Arbitrary<'L' | 'R'>,
             fc.integer({ min: 0, max: 10000 }),
             (position, direction, distance) => {
-              console.log(`Testing: position=${position}, dir=${direction}, dist=${distance}`);
               const result = movePosition(position, direction, distance);
               return result >= 0 && result < 100;
             }
