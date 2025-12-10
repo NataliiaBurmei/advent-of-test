@@ -1,4 +1,1 @@
-console.log("Hello, Advent of Test!");
-
-
-
+console.log('Hello, Advent of Test!');

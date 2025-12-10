@@ -4098,7 +4098,7 @@ R13
 L7
 L35`;
 
-const lines = input.split('\n').filter(line => line.trim() !== '');
+const lines = input.split('\n').filter((line) => line.trim() !== '');
 
 let position = 50;
 let zeroCount = 0;
@@ -4106,16 +4106,16 @@ let zeroCount = 0;
 for (const line of lines) {
   const direction = line[0];
   const distance = parseInt(line.slice(1));
-  
+
   if (direction === 'L') {
-    position = ((position - distance) % 100 + 100) % 100;
+    position = (((position - distance) % 100) + 100) % 100;
   } else {
     position = (position + distance) % 100;
   }
-  
+
   if (position === 0) {
     zeroCount++;
   }
 }
 
-console.log("The password is:", zeroCount);
+console.log('The password is:', zeroCount);
