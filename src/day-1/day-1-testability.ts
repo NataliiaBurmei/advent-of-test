@@ -1,4 +1,4 @@
-import { input } from './input';
+import { input } from './day-1-input';
 
 export function parseInstruction(instruction: string): { direction: 'L' | 'R'; distance: number } {
   const direction = instruction[0] as 'L' | 'R';
