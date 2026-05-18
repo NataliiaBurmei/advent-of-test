@@ -1,4 +1,4 @@
-import { parseInstruction, movePosition, countZeroPassings } from './day-1-testability';
+import { parseInstruction, movePosition, countZeroPassings } from './day-1-solution';
 
 describe('parseInstruction - positive cases', () => {
   it('should parse left instruction correctly', () => {
