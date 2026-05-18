@@ -105,7 +105,7 @@ it('should handle extremely large distances', () => {
 ## Running the Fuzz Tests
 
 ```bash
-npm test -- --testPathPatterns=fuzz
+pnpm test:fuzz
 ```
 
 Or run all tests:
