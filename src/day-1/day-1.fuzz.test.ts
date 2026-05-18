@@ -1,5 +1,5 @@
 import fc from 'fast-check';
-import { parseInstruction, movePosition, countZeroPassings } from './day-1-testability';
+import { parseInstruction, movePosition, countZeroPassings } from './day-1-solution';
 
 // generated data for understanding the data that is being generated
 const validInstruction = fc
