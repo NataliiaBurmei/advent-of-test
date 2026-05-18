@@ -4,7 +4,7 @@ const input = invalidIds.split(',');
 
 export function parseInvalidIds(invalidIds: string[]): { start: number; end: number }[] {
   return invalidIds.map((id) => {
-    const [start, end] = id.split('-').map(Number);
+    const [start, end] = id.split(/(?<=\d)-/).map(Number);
     return { start, end };
   });
 }
