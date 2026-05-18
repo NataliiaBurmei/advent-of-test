@@ -38,7 +38,7 @@ Even without fuzz or mutation tooling, deliberately testing negative inputs (inv
 pnpm test
 
 # Run fuzz tests only
-pnpm test -- --testPathPatterns=fuzz
+pnpm test:fuzz
 
 # Run mutation tests
 npx stryker run
