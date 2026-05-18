@@ -23,7 +23,7 @@ jobs:
           run_install: true
 
       - name: Unit tests
-        run: pnpm test -- --testPathIgnorePatterns=".*\.fuzz\.test\.ts"
+        run: pnpm test
 
       - name: Mutation tests
         run: npx stryker run
