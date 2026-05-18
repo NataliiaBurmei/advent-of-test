@@ -10,4 +10,7 @@ module.exports = {
   },
   testPathIgnorePatterns: ["/node_modules/", "/dist/", "\\.fuzz\\.test\\."],
   verbose: true,
+  collectCoverageFrom: ["src/**/*.ts", "!src/**/*.test.ts", "!src/**/*.fuzz.test.ts"],
+  coverageDirectory: "coverage",
+  coverageReporters: ["lcov", "text", "clover"],
 };

@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "test:fuzz": "jest --testPathPatterns=\"\\.fuzz\\.test\\.\" --testPathIgnorePatterns=\"/node_modules/\" \"/dist/\"",
+    "sonar": "sonar-scanner",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts",
     "lint": "eslint . --ext .ts",
@@ -17,6 +19,7 @@
   "keywords": [],
   "license": "MIT",
   "devDependencies": {
+    "sonarqube-scanner": "^4.2.6",
     "@stryker-mutator/core": "^9.4.0",
     "@stryker-mutator/jest-runner": "^9.4.0",
     "@types/jest": "^30.0.0",
